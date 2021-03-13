@@ -11,16 +11,20 @@ public class Main {
         System.out.println(l.getName());
         System.out.println(l.getVolume());
 
-        Liquid anotherLiquid = new Liquid("Reiner Alkohol", 0.125, 99.9);
-
         Drink d = new SimpleDrink("Rotwein",l);
+        System.out.println(d);
 
-        List<Liquid> liquids = new ArrayList<>();
-        liquids.add(l);
-        liquids.add(anotherLiquid);
-
+        Liquid anotherLiquid = new Liquid("Reiner Alkohol", 0.125, 99.9);
         Drink myDrink = new AlexDrink("Wonderful name", anotherLiquid);
-
         System.out.println(myDrink);
+
+        FabiDrink cocktail = new FabiDrink("Long Island Ice Tea", new Liquid("Cola", 0.05, 0));
+        cocktail.addLiquid(new Liquid("White Rum", 0.02, 39.9));
+        cocktail.addLiquid(new Liquid("Vodka", 0.02, 39.9));
+        cocktail.addLiquid(new Liquid("White Tequila", 0.02, 39.9));
+        cocktail.addLiquid(new Liquid("Gin", 0.02, 39.9));
+        cocktail.addLiquid(new Liquid("Triple Sec", 0.02, 37.9));
+        cocktail.addLiquid(new Liquid("Lime juice", 0.01, 0));
+        System.out.println(cocktail);
     }
 }
