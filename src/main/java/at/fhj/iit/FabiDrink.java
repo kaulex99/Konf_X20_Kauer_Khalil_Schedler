@@ -1,6 +1,5 @@
 package at.fhj.iit;
 
-import javax.crypto.AEADBadTagException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,24 +10,36 @@ import java.util.List;
  */
 public class FabiDrink extends Drink {
 
-    protected ArrayList<Liquid> liquids = new ArrayList<>();
+    protected List<Liquid> liquids = new ArrayList<>();
+
     /**
      * Creates a FabiDrink object with given name and a main liquid
      *
-     * @param name name of drink
-     * @param mainLiquid    the main liquid in the drink
+     * @param name       name of drink
+     * @param mainLiquid the main liquid in the drink
      */
     FabiDrink(String name, Liquid mainLiquid) {
         super(name);
         this.liquids.add(mainLiquid);
     }
 
-    FabiDrink(String name, Liquid ...liquids){
+    /**
+     * Creates a FabiDrink object with given name and liquids
+     *
+     * @param name    name of drink
+     * @param liquids liquids contained in the drink
+     */
+    FabiDrink(String name, List<Liquid> liquids) {
         super(name);
-        this.liquids.addAll(Arrays.asList(liquids));
+        this.liquids.addAll(liquids);
     }
 
-    void addLiquid(Liquid l){
+    /**
+     * adds a new liquid to the drink
+     *
+     * @param l liquid to add
+     */
+    void addLiquid(Liquid l) {
         this.liquids.add(l);
     }
 
@@ -36,7 +47,7 @@ public class FabiDrink extends Drink {
     public double getVolume() {
         double v = 0;
 
-        for(Liquid l : liquids){
+        for (Liquid l : liquids) {
             v += l.getVolume();
         }
         return v;
@@ -45,7 +56,7 @@ public class FabiDrink extends Drink {
     @Override
     public double getAlcoholPercent() {
         double alcQuantity = 0;
-        for(Liquid l : liquids){
+        for (Liquid l : liquids) {
             alcQuantity += l.getVolume() * l.getAlcoholPercent();
         }
         return alcQuantity * this.getVolume();
@@ -53,10 +64,10 @@ public class FabiDrink extends Drink {
 
     @Override
     public boolean isAlcoholic() {
-        for(Liquid l : liquids){
-           if(l.getAlcoholPercent() > 0){
-               return true;
-           }
+        for (Liquid l : liquids) {
+            if (l.getAlcoholPercent() > 0) {
+                return true;
+            }
         }
         return false;
     }
