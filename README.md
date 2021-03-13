@@ -9,4 +9,10 @@ Repository for exercise UE02 of configuration management course.
 # AlexDrink
 # AdamsDrink
 # FabiDrink
-
+Represents a wild mix of Liquids. Can be used to create a cocktail.  
+For creation a name and a main liquid is needed.
+- `toSting` creates a String with the recipe of the drink
+- `addLiquid` adds a new Liquid to the drink
+- `isAlcoholic` returns true if any of the liquids contains more than 0% alcohol.
+- `getAlcoholPercent` returns the alcohol volume percentage of the mixture
+- `getVolume` returns the volume of the mixture
