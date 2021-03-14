@@ -9,7 +9,7 @@ Repository for exercise UE02 of configuration management course.
 # Main
 Different liquids and drinks are created and printed on the console.
 
-# AlexDrink
+
 # AdamsDrink
 # FabiDrink
 Represents a wild mix of Liquids. Can be used to create a cocktail.  
@@ -21,3 +21,7 @@ For creation a name and a main liquid is needed.
   - sums up the quantity of pure alcohol of each liquid (`pure alcohol = volume * alcohol percentage [/ 100]`)
   - this sum then gets divided by the volume of the mixture (`alcohol percentage = pure alcohol / volume [* 100]`)
 - `getVolume` returns the volume of the mixture
+
+# AlexDrink
+Represents a special `FabiDrink` which has minimum 40% of alcohol
+- 'toString'

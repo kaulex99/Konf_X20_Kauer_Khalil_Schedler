@@ -7,6 +7,6 @@ public class AlexDrink extends FabiDrink {
 
     @Override
     public String toString() {
-        return name + " has " + getAlcoholPercent() + "%";
+        return name + " has " + Math.max(40, getAlcoholPercent()) + "%";
     }
 }
