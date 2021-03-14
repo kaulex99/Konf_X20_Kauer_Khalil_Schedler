@@ -24,4 +24,3 @@ For creation a name and a main liquid is needed.
 
 # AlexDrink
 Represents a special `FabiDrink` which has minimum 40% of alcohol
-- 'toString'

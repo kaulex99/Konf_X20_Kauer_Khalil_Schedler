@@ -6,7 +6,12 @@ public class AlexDrink extends FabiDrink {
     }
 
     @Override
+    public double getAlcoholPercent() {
+        return Math.max(40,super.getAlcoholPercent());
+    }
+
+    @Override
     public String toString() {
-        return name + " has " + Math.max(40, getAlcoholPercent()) + "%";
+        return name + " has " + getAlcoholPercent() + "%";
     }
 }
