@@ -33,7 +33,40 @@ For creation a name and a main liquid is needed.
 Represents a special `FabiDrink` which has minimum 40% of alcohol
 - `getAlcoholPercent` returns the alcohol volume percentage of the mixture. If lower than 40%, level will be increased automatically 
 
+# JavaDoc
+JavaDoc is part of Java to enable developers a way of documentation. There is a predefined structe how e.g. a class documentation should look like.
+``` java
+/**
+* @author Max Mustermann
+* @version x.y
+* @see SpecialClass
+*/
+public class XYZ {...}
+```
 
+## Keywords
+This is just a quick JavaDoc crash course. [Here](https://www.tutorialspoint.com/java/java_documentation.htm) you can read more.
+
+### @author
+Keyword to provide the authors of the class/method.
+
+### @version
+Keyword to providde current version of the class/method.
+
+### @see
+Keyword to tell readers that there ist another important class/method which is necessary for the described one.
+
+### @deprecated
+Keyword which defines a class/method as outdated. This means it should not be used!
+
+### @param
+Keyword to describe a param of a method.
+
+### @return
+Keyword to describe the return value of a method
+
+### @throws
+Keyword to tell the reader that this method could cause an exception.
 
 # Tests
 To perform tests we had to add the following directories ./src/test/java/at/fhj/iit
