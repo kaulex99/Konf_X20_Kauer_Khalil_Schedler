@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * FabiDrink
  * Represents a wild mix of liquids
+ *
+ * @author Fabian Schedler
+ * @version 1.1
  */
 public class FabiDrink extends Drink {
 
