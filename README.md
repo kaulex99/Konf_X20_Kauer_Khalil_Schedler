@@ -7,7 +7,7 @@ Repository for exercise UE02 of configuration management course.
 - Schedler Fabian
 
 ## Main
-Different liquids and drinks are created and printed on the console.
+Different liquids and drinks are created and printed on the console.s
 
 
 ## AdamsDrink
@@ -32,3 +32,21 @@ For creation a name and a main liquid is needed.
 ## AlexDrink
 Represents a special `FabiDrink` which has minimum 40% of alcohol
 - `getAlcoholPercent` returns the alcohol volume percentage of the mixture. If lower than 40%, level will be increased automatically 
+
+
+
+# Tests
+To perform tests we had to add the following directories ./src/test/java/at/fhj/iit
+Then everyone addes his test files.
+
+## AlexTest
+The goal was to reach 100% tests coverage. So we had to test every method of the class. Generally, to tell Java that we want to create a test method, we have to add `@Test` above. In the `@BeforeEach` annotated method, we create an instance of the Drink, so we have an instance ready to test. 
+
+## TestCoverage result by IntelliJ
+| Classname  | Class [%]  | Method [%]  | Line [%]  |   |
+|:-:|:-:|:-:|:-:|:-:|
+|  AlexDrink  | 100%  | 100%  | 100%  |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
+
