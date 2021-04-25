@@ -113,7 +113,7 @@ class FabiDrinkTest {
     }
 
     @Test
-    @DisplayName("Test constructor with main Liquid")
+    @DisplayName("Test constructor with Liquid list")
     void liquidListConstructor() {
         List<Liquid> liquids = new ArrayList<>();
 
