@@ -70,7 +70,7 @@ Keyword to tell the reader that this method could cause an exception.
 
 # Tests
 To perform tests we had to add the following directories ./src/test/java/at/fhj/iit
-Then everyone addes his test files.
+Then everyone adds his test files.
 
 ## AlexTest
 The goal was to reach 100% tests coverage. So we had to test every method of the class. Generally, to tell Java that we want to create a test method, we have to add `@Test` above. In the `@BeforeEach` annotated method, we create an instance of the Drink, so we have an instance ready to test. 
