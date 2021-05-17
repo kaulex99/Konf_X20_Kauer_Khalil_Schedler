@@ -5,3 +5,6 @@
 
 # Build
 target/
+
+# Copyed by maven
+/src/site/markdown/README.md

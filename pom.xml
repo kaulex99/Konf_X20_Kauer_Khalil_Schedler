@@ -192,4 +192,66 @@
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <!-- maven site for documentation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+            <!-- Java Doc within Maven Site Documentation-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <!-- Disable JavaDoc warnings -->
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
+                </configuration>
+            </plugin>
+
+            <!-- Test Coverage from JaCoCo Plugin integration in Maven Site Documentation -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <dataFile>${jacoco.execution.data.file}</dataFile>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- define SCM and will be read by generating maven site -->
+    <scm>
+        <connection>scm:git:https://github.com/kaulex99/Konf_M20_Kauer_Khalil_Schedler</connection>
+        <developerConnection>scm:git:https://github.com/kaulex99/Konf_M20_Kauer_Khalil_Schedler</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/kaulex99/Konf_M20_Kauer_Khalil_Schedler</url>
+    </scm>
+
+    <!-- define your current license, Care about sharing :) -->
+    <licenses>
+        <license>
+            <name>GNU GPLv3 </name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.de.html</url>
+            <distribution>repo</distribution>
+            <comments>I care about sharing improvements.</comments>
+        </license>
+    </licenses>
 </project>
