@@ -89,3 +89,11 @@ Keyword to describe the return value of a method
 
 ### @throws
 Keyword to tell the reader that this method could cause an exception.
+
+# Maven
+## Automated testing
+That maven can run the automated tests the maven surefire plugin is needed (org.apache.maven.plugins:maven-surefire-plugin)
+
+## Testreports
+To generate a test report for the maven site the jacoco plugin can be used (org.jacoco:jacoco-maven-plugin)  
+Therefore in the build "section" the report must be created and in the report "section" it gets added to the maven site
