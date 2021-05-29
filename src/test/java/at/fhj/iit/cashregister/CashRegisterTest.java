@@ -5,6 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests CashRegister implementation
+ *
+ * @author Fabian Schedler, Alexander Kauer, Adam Khalil
+ * @see CashRegister
+ */
 class CashRegisterTest {
 
     private CashRegister cashRegister;
