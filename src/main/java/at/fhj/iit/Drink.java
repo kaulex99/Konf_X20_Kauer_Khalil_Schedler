@@ -1,9 +1,11 @@
 package at.fhj.iit;
 
+import at.fhj.iit.cashregister.Buyable;
+
 /**
  * Abstract base class for concrete drink classes
  */
-public abstract class Drink {
+public abstract class Drink implements Buyable {
 
     /**
      * name of the drink, so it's easier to identify drink

@@ -38,4 +38,9 @@ public class AlexDrink extends FabiDrink {
     public String toString() {
         return name + " has " + getAlcoholPercent() + "%";
     }
+
+    @Override
+    public double getPrice() {
+        return 5.3;
+    }
 }

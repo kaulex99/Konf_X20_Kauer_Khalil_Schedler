@@ -34,4 +34,9 @@ public class AdamsDrink extends AlexDrink {
     public boolean isAlcoholic() {
         return getAlcoholPercent() > 0;
     }
+
+    @Override
+    public double getPrice() {
+        return 8.4;
+    }
 }
