@@ -12,9 +12,17 @@ public class CashRegister {
         transactions.add(new Transaction(product, seller, sellDate));
     }
 
+    /**
+     * @return revenue made with none alcoholic drinks
+     */
     double getNoneAlcoholicRevenue(){
-        // TODO implement Fabi
-        return 0;
+        double revenue = 0;
+        for (Transaction t : transactions){
+            if(!t.getProduct().isAlcoholic()) {
+                revenue += t.getProduct().getPrice();
+            }
+        }
+        return revenue;
     }
 
     double getLowAlcoholicRevenue(){
