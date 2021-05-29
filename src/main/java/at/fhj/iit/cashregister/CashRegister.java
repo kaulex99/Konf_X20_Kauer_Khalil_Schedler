@@ -54,4 +54,11 @@ public class CashRegister {
         // TODO implement Alex
         return 0;
     }
+
+    /**
+     * @return number of transactions (sold drinks)
+     */
+    int getTransactionCount() {
+        return transactions.size();
+    }
 }
