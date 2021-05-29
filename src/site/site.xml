@@ -5,6 +5,7 @@
         <menu name="Overview">
             <item name="Introduction" href="index.html"/>
             <item name="README" href="README.html"/>
+            <item name="CashRegister" href="CashRegister.html"/>
         </menu>
         <menu ref="reports"/>
         <menu ref="parent"/>
