@@ -25,6 +25,9 @@ class CashRegisterTest {
         // TODO @Fabian implement
     }
 
+    /**
+     * Test CashRegister.getNoneAlcoholicRevenue method
+     */
     @Test
     @DisplayName("Check non alcoholic revenue")
     void getNoneAlcoholicRevenue() {
