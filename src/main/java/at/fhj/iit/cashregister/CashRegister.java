@@ -33,7 +33,7 @@ public class CashRegister {
     }
 
     /**
-     * Total sales of low alcoholic drinks
+     * Total sales of high alcoholic drinks
      *
      * @return highAlcoholRevenue made with alcoholic drinks that are higher than 16%
      */
