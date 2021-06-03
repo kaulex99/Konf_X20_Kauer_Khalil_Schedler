@@ -49,7 +49,7 @@ public class FabiDrink extends Drink {
     }
 
     /**
-     * adds a new liquid to the drink
+     * Adds a new liquid to the drink
      *
      * @param l liquid to add
      */
@@ -58,6 +58,8 @@ public class FabiDrink extends Drink {
     }
 
     /**
+     * Calculates Volume of the whole drink
+     *
      * @return volume of the whole drink
      */
     @Override
@@ -71,6 +73,8 @@ public class FabiDrink extends Drink {
     }
 
     /**
+     * Calculates the alcohol percentage
+     *
      * @return the alcohol percentage of the whole drink
      */
     @Override
@@ -85,6 +89,8 @@ public class FabiDrink extends Drink {
     }
 
     /**
+     * Check if the drink contains any alcoholic liquid
+     *
      * @return if the drink is alcoholic
      */
     @Override
@@ -98,6 +104,8 @@ public class FabiDrink extends Drink {
     }
 
     /**
+     * Creates a recipe string
+     *
      * @return formatted recipe
      */
     @Override
@@ -118,7 +126,9 @@ public class FabiDrink extends Drink {
     }
 
     /**
-     * @return the price of this drink (depending on number of liquids)
+     * Calculates the price of the drink (depending on number of liquids)
+     *
+     * @return the price of this drink
      */
     @Override
     public double getPrice() {
