@@ -249,7 +249,7 @@
     <licenses>
         <license>
             <name>GNU GPLv3 </name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.de.html</url>
+            <url>https://www.gnu.org/licenses/gpl-3.0-standalone.html</url>
             <distribution>repo</distribution>
             <comments>I care about sharing improvements.</comments>
         </license>
