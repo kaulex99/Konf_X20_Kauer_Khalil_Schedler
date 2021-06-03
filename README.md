@@ -66,11 +66,13 @@ of the Drink, so we have an instance ready to test.
 
 ## TestCoverage result by IntelliJ
 
-| Classname  | Class [%] | Method [%] | Line [%] | 
-| :--------: | :-------: | :--------: | :------: |
-| AdamsDrink | 100%      | 100%       | 100%     |
-| FabiDrink  | 100%      | 100%       | 100%     |
-| AlexDrink  | 100%      | 100%       | 100%     |
+| Classname    | Class [%] | Method [%] | Line [%] | 
+| :----------: | :-------: | :--------: | :------: |
+| AdamsDrink   | 100%      | 100%       | 100%     |
+| FabiDrink    | 100%      | 100%       | 100%     |
+| AlexDrink    | 100%      | 100%       | 100%     |
+| CashRegister | 100%      | 100%       | 100%     |
+| Transaction  | 100%      | 100%       | 100%     |
 
 # JavaDoc
 
