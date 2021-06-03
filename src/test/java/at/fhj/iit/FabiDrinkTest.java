@@ -161,4 +161,22 @@ class FabiDrinkTest {
         assertEquals(3, drink.liquids.size());
         assertEquals("TestDrink", drink.name);
     }
+
+    /**
+     * test the get price method
+     */
+    @Test
+    @DisplayName("Testing get price method")
+    void getPriceTest() {
+        List<Liquid> liquids = new ArrayList<>();
+
+        liquids.add(new Liquid("L1", 100, 10));
+        liquids.add(new Liquid("L2", 100, 10));
+        liquids.add(new Liquid("L3", 100, 10));
+        liquids.add(new Liquid("L4", 100, 10));
+
+        FabiDrink drink = new FabiDrink("TestDrink", liquids);
+
+        assertEquals(5.2, drink.getPrice());
+    }
 }

@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import kotlin.DslMarker;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -55,4 +56,9 @@ class AdamsDrinkTest {
         assertTrue(drink.isAlcoholic());
     }
 
+    @Test
+    @DisplayName("Get price test")
+    void getPriceTest() {
+        assertEquals(8.4, drink.getPrice());
+    }
 }

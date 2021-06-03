@@ -1,14 +1,11 @@
-
-
 package at.fhj.iit;
 
 /**
  * AdamsDrink is an extension of AlexDrink
  *
- * @Author: Adam Khalil
- * @Version: 1.0
+ * @author Adam Khalil
+ * @version 1.0
  */
-
 public class AdamsDrink extends AlexDrink {
 
     public AdamsDrink(String name, Liquid mainLiquid) {
