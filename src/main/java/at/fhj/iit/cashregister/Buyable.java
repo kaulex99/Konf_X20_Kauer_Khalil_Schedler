@@ -4,5 +4,5 @@ package at.fhj.iit.cashregister;
 public interface Buyable {
     double getPrice();
     boolean isAlcoholic();
-    double getAlcoholPercentage();
+    double getAlcoholPercent();
 }

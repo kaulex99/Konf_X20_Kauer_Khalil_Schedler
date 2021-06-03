@@ -25,7 +25,7 @@ public class CashRegister {
     double getLowAlcoholicRevenue() {
         double lowAlcoholRevenue = 0;
         for (Transaction t : transactions) {
-            if (t.getProduct().isAlcoholic() && t.getProduct().getAlcoholPercentage() <= 16) {
+            if (t.getProduct().getAlcoholPercent() > 0 && t.getProduct().getAlcoholPercent() <= 16) {
                 lowAlcoholRevenue += t.getProduct().getPrice();
             }
         }
@@ -40,7 +40,7 @@ public class CashRegister {
     double getHighAlcoholicRevenue() {
         double highAlcoholRevenue = 0;
         for (Transaction t : transactions) {
-            if (t.getProduct().getAlcoholPercentage() > 16) {
+            if (t.getProduct().getAlcoholPercent() > 16) {
                 highAlcoholRevenue += t.getProduct().getPrice();
             }
         }

@@ -11,7 +11,7 @@ package at.fhj.iit;
  */
 public class AdamsDrink extends AlexDrink {
 
-    AdamsDrink(String name, Liquid mainLiquid) {
+    public AdamsDrink(String name, Liquid mainLiquid) {
         super(name, mainLiquid);
     }
     @Override
