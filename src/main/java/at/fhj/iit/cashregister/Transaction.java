@@ -5,6 +5,7 @@ import java.util.Date;
 /**
  * Simple Transaction for CashRegister class
  * needed to store product buying behaviour in CashRegister class
+ *
  * @author Fabian Schedler, Alexander Kauer, Adam Khalil
  * @version 1.0
  */
@@ -15,9 +16,10 @@ public class Transaction {
 
     /**
      * Constructor to create a Transaction object
-     * @param product instance of a buyable product i.e. any Drink
+     *
+     * @param product    instance of a buyable product i.e. any Drink
      * @param sellerName name of the sell
-     * @param buyDate date, when the product was sold
+     * @param buyDate    date, when the product was sold
      */
     public Transaction(Buyable product, String sellerName, Date buyDate) {
         this.product = product;
@@ -26,6 +28,8 @@ public class Transaction {
     }
 
     /**
+     * Returns the associated buyable
+     *
      * @return the Buyable sold in this transaction
      */
     public Buyable getProduct() {
@@ -33,6 +37,8 @@ public class Transaction {
     }
 
     /**
+     * Returns the name of the seller
+     *
      * @return name of the seller as string
      */
     public String getSellerName() {
@@ -40,6 +46,8 @@ public class Transaction {
     }
 
     /**
+     * Returns the sell date
+     *
      * @return Date when the transaction was accomplished
      */
     public Date getBuyDate() {

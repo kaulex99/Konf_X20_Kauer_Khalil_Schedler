@@ -12,12 +12,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ *  Testing FabiDrink implementation
+ *
  * @author Fabian Schedler
  * @version 1.0
- * @since 2021-04-15
  * @see FabiDrink
- *
- * Testing FabiDrink Implementation
  */
 @DisplayName("Testing FabiDrink implementation")
 class FabiDrinkTest {

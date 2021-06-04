@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
+ * Tests the implementation of AlexDrink
+ *
  * @author Alexander Kauer
  * @version 1.0
  * @see AlexDrink

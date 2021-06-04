@@ -8,12 +8,19 @@ package at.fhj.iit;
  */
 public class AdamsDrink extends AlexDrink {
 
+    /**
+     * Instantiate a AdamDrink
+     *
+     * @param name       name of the drink
+     * @param mainLiquid main liquid contained in the drink
+     */
     public AdamsDrink(String name, Liquid mainLiquid) {
         super(name, mainLiquid);
     }
 
     /**
      * Gives the volume of a drink and adds 1
+     *
      * @return the volume of a drink
      */
     @Override
@@ -23,6 +30,7 @@ public class AdamsDrink extends AlexDrink {
 
     /**
      * Gets you the alcohol percentage and divides it with 10
+     *
      * @return alcohol percentage
      */
     @Override
@@ -32,6 +40,7 @@ public class AdamsDrink extends AlexDrink {
 
     /**
      * Checks if the alcohol percentage is over 0%
+     *
      * @return if it is alcoholic or not
      */
     @Override
@@ -40,7 +49,8 @@ public class AdamsDrink extends AlexDrink {
     }
 
     /**
-     * returns value of the price for each drink which is 8.4
+     * Calculates the price of the drink
+     *
      * @return the price of this drink
      */
     @Override
@@ -49,7 +59,8 @@ public class AdamsDrink extends AlexDrink {
     }
 
     /**
-     * returns the name of the drink
+     * Returns the name of the drink
+     *
      * @return name of the drink
      */
     @Override

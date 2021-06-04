@@ -1,6 +1,8 @@
 package at.fhj.iit;
 
 /**
+ * A special version of FabiDrink with a minimum of 40% alc.
+ *
  * @author Alexander Kauer
  * @version 1.0
  */
@@ -8,7 +10,8 @@ public class AlexDrink extends FabiDrink {
 
     /**
      * Initialize an AlexDrink
-     * @param name Name of the drink
+     *
+     * @param name       Name of the drink
      * @param mainLiquid Main type of liquid
      */
     public AlexDrink(String name, Liquid mainLiquid) {
@@ -16,6 +19,8 @@ public class AlexDrink extends FabiDrink {
     }
 
     /**
+     * Calculates the alcohol percentage
+     *
      * @return the current amount of alcohol in % (min. 40%)
      */
     @Override
@@ -24,6 +29,8 @@ public class AlexDrink extends FabiDrink {
     }
 
     /**
+     * Checks if the drink is alcoholic - always true
+     *
      * @return as the drink has always min 40% of alcohol - it is alcoholic
      */
     @Override
@@ -32,6 +39,8 @@ public class AlexDrink extends FabiDrink {
     }
 
     /**
+     * Creates a string with all necessary information
+     *
      * @return formatted String with all necessary information
      */
     @Override
@@ -40,7 +49,9 @@ public class AlexDrink extends FabiDrink {
     }
 
     /**
-     * @return the price of this drink (depending on number of liquids)
+     * Calculates the price of this drink
+     *
+     * @return the price of this drink
      */
     @Override
     public double getPrice() {
