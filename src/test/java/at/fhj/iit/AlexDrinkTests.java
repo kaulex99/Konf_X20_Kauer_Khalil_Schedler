@@ -23,7 +23,7 @@ public class AlexDrinkTests {
      * setup everything for testing AlexDrink
      */
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         Liquid l = new Liquid("", 12.2, 20);
         drink = new AlexDrink("Alex's special drink", l);
     }
@@ -33,7 +33,7 @@ public class AlexDrinkTests {
      */
     @Test
     @DisplayName("Verify all properties of drink")
-    void checkValues() {
+    public void checkValues() {
         assertEquals(12.2, drink.getVolume());
         assertEquals(40, drink.getAlcoholPercent());
     }
@@ -43,7 +43,7 @@ public class AlexDrinkTests {
      */
     @Test
     @DisplayName("Check toString formatting")
-    void checkToString() {
+    public void checkToString() {
         assertEquals("Alex's special drink has 40.0%", drink.toString());
     }
 
@@ -52,7 +52,7 @@ public class AlexDrinkTests {
      */
     @Test
     @DisplayName("Check if it is alcoholic")
-    void checkIfAlcoholic() {
+    public void checkIfAlcoholic() {
         assertTrue(drink.isAlcoholic());
     }
 
@@ -61,7 +61,7 @@ public class AlexDrinkTests {
      */
     @Test
     @DisplayName("Testing get price method")
-    void getPriceTest() {
+    public void getPriceTest() {
         assertEquals(5.3, drink.getPrice());
     }
 
@@ -69,7 +69,7 @@ public class AlexDrinkTests {
      * Clean everything after testing
      */
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
         drink = null;
         //add other teardown logic if necessary
     }

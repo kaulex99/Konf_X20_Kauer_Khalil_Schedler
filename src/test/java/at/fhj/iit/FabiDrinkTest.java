@@ -12,14 +12,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *  Testing FabiDrink implementation
+ * Testing FabiDrink implementation
  *
  * @author Fabian Schedler
  * @version 1.0
  * @see FabiDrink
  */
-@DisplayName("Testing FabiDrink implementation")
-class FabiDrinkTest {
+public class FabiDrinkTest {
 
     private FabiDrink sut;
 
@@ -27,7 +26,7 @@ class FabiDrinkTest {
      * inits FabiDrink for each individual test
      */
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         this.sut = new FabiDrink("TestDrink");
     }
 
@@ -37,7 +36,7 @@ class FabiDrinkTest {
     @ParameterizedTest
     @DisplayName("Testing add Liquid")
     @ValueSource(ints = {0, 5, 10, 13})
-    void addLiquid(int count) {
+    public void addLiquid(int count) {
         for (int i = 0; i < count; i++) {
             this.sut.addLiquid(new Liquid("Liquid" + i, 0.1, 50));
         }
@@ -50,7 +49,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing volume")
-    void getVolume() {
+    public void getVolume() {
         assertEquals(this.sut.getVolume(), 0);
 
         this.sut.addLiquid(new Liquid("Liquid1", 0.1, 50));
@@ -65,7 +64,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing alcohol percentage calculation")
-    void getAlcoholPercent() {
+    public void getAlcoholPercent() {
         assertEquals(0, this.sut.getAlcoholPercent());
 
         this.sut.addLiquid(new Liquid("Liquid1", 0.100, 50));
@@ -80,7 +79,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing is alcoholic")
-    void isAlcoholic() {
+    public void isAlcoholic() {
         assertFalse(this.sut.isAlcoholic());
 
         this.sut.addLiquid(new Liquid("L1", 100, 10));
@@ -95,7 +94,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing is not alcoholic")
-    void isNotAlcoholic() {
+    public void isNotAlcoholic() {
         assertFalse(this.sut.isAlcoholic());
 
         this.sut.addLiquid(new Liquid("L1", 0.1, 0));
@@ -107,15 +106,15 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing toString format")
-    void testToString() {
+    public void testToString() {
         this.sut.addLiquid(new Liquid("L1", 0.1, 38));
         this.sut.addLiquid(new Liquid("L2", 0.25, 85));
         this.sut.addLiquid(new Liquid("L3", 1.2, 0));
 
         assertEquals("TestDrink has 16,16% and contains:\n" +
-                "\t- 0.1 l of L1 (38.0%)\n" +
-                "\t- 0.25 l of L2 (85.0%)\n" +
-                "\t- 1.2 l of L3 (0.0%)\n",
+                        "\t- 0.1 l of L1 (38.0%)\n" +
+                        "\t- 0.25 l of L2 (85.0%)\n" +
+                        "\t- 1.2 l of L3 (0.0%)\n",
                 this.sut.toString());
     }
 
@@ -124,7 +123,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing constructor with name")
-    void nameConstructor() {
+    public void nameConstructor() {
         FabiDrink drink = new FabiDrink("TestName");
 
         assertEquals("TestName", drink.name);
@@ -136,7 +135,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing constructor with main Liquid")
-    void mainLiquidConstructor() {
+    public void mainLiquidConstructor() {
         FabiDrink drink = new FabiDrink("TestDrink", new Liquid("L1", 0.1, 10));
 
         assertEquals(1, drink.liquids.size());
@@ -148,7 +147,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing constructor with Liquid list")
-    void liquidListConstructor() {
+    public void liquidListConstructor() {
         List<Liquid> liquids = new ArrayList<>();
 
         liquids.add(new Liquid("L1", 100, 10));
@@ -166,7 +165,7 @@ class FabiDrinkTest {
      */
     @Test
     @DisplayName("Testing get price method")
-    void getPriceTest() {
+    public void getPriceTest() {
         List<Liquid> liquids = new ArrayList<>();
 
         liquids.add(new Liquid("L1", 100, 10));

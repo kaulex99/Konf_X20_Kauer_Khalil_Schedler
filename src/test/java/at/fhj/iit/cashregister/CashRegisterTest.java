@@ -1,8 +1,8 @@
 package at.fhj.iit.cashregister;
 
-import at.fhj.iit.Liquid;
 import at.fhj.iit.AlexDrink;
 import at.fhj.iit.FabiDrink;
+import at.fhj.iit.Liquid;
 import at.fhj.iit.SimpleDrink;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Tests CashRegister implementation
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @version 1.0
  * @see CashRegister
  */
-class CashRegisterTest {
+public class CashRegisterTest {
 
     /**
      * Instance for tests (system under test)
@@ -32,7 +32,7 @@ class CashRegisterTest {
      * Create fresh CashRegister instance for each test
      */
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         cashRegister = new CashRegister();
     }
 
@@ -41,7 +41,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Check if sell adds transactions")
-    void sell() {
+    public void sell() {
         assertEquals(0, cashRegister.getTransactionCount());
 
         Buyable drink = new SimpleDrink("Drink", new Liquid("Liquid", 0.5, 5));
@@ -63,7 +63,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Check non alcoholic revenue")
-    void getNoneAlcoholicRevenue() {
+    public void getNoneAlcoholicRevenue() {
         assertEquals(0, cashRegister.getNoneAlcoholicRevenue());
 
         Date now = new Date();
@@ -85,7 +85,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Check low alcoholic revenue")
-    void getLowAlcoholicRevenue() {
+    public void getLowAlcoholicRevenue() {
         assertEquals(0, cashRegister.getLowAlcoholicRevenue());
 
         Date now = new Date();
@@ -113,7 +113,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Check high alcoholic revenue")
-    void getHighAlcoholicRevenue() {
+    public void getHighAlcoholicRevenue() {
         assertEquals(0, cashRegister.getHighAlcoholicRevenue());
 
         Date now = new Date();
@@ -144,7 +144,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Get day revenue")
-    void getDayRevenue() {
+    public void getDayRevenue() {
         FabiDrink cocktail = new FabiDrink("Long Island Ice Tea", new Liquid("Cola", 0.05, 0));
         cocktail.addLiquid(new Liquid("White Rum", 0.02, 39.9));
         Date today = Date.from(LocalDate.now(ZoneId.systemDefault()).atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
@@ -163,7 +163,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Get person revenue")
-    void getPersonRevenue() {
+    public void getPersonRevenue() {
         AlexDrink drink1 = new AlexDrink("TestDrink1", new Liquid("TestLiquid", 1.15, 20));
         cashRegister.sell(drink1, "Franz", new Date());
         cashRegister.sell(drink1, "Heinz", new Date());
@@ -179,7 +179,7 @@ class CashRegisterTest {
      */
     @Test
     @DisplayName("Get person and day revenue")
-    void getPersonDayRevenue() {
+    public void getPersonDayRevenue() {
         AlexDrink drink1 = new AlexDrink("TestDrink1", new Liquid("TestLiquid", 1.15, 20));
         Date today = Date.from(LocalDate.now(ZoneId.systemDefault()).atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
         Date otherDay = Date.from(LocalDate.of(2021, 5, 29).atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());

@@ -15,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * @version 1.0
  * @see AdamsDrink
  */
-
-class AdamsDrinkTest {
+public class AdamsDrinkTest {
 
     private AdamsDrink drink;
 
@@ -24,7 +23,7 @@ class AdamsDrinkTest {
      * Instantiates a AdamsDrink for each individual test
      */
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         Liquid liquid = new Liquid("beverage", 6, 10);
         drink = new AdamsDrink("drinkName", liquid);
     }
@@ -33,7 +32,7 @@ class AdamsDrinkTest {
      * Cleans everything after testing
      */
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
         drink = null;
         //add other teardown logic if necessary
     }
@@ -43,7 +42,7 @@ class AdamsDrinkTest {
      */
     @Test
     @DisplayName("Check if the alcohol percentage calculation works correctly")
-    void AlcoholPercent() {
+    public void AlcoholPercent() {
         assertEquals(4, drink.getAlcoholPercent());
     }
 
@@ -52,7 +51,7 @@ class AdamsDrinkTest {
      */
     @Test
     @DisplayName("Verify that the to string only returns the name")
-    void testToString() {
+    public void testToString() {
         assertEquals("drinkName", drink.toString());
     }
 
@@ -61,7 +60,7 @@ class AdamsDrinkTest {
      */
     @Test
     @DisplayName("Check if one gets added to the volume")
-    void getVolume() {
+    public void getVolume() {
         assertEquals(7, drink.getVolume());
     }
 
@@ -70,7 +69,7 @@ class AdamsDrinkTest {
      */
     @Test
     @DisplayName("Check if the drink is alcoholic")
-    void isAlcoholic() {
+    public void isAlcoholic() {
         assertTrue(drink.isAlcoholic());
     }
 
@@ -79,7 +78,7 @@ class AdamsDrinkTest {
      */
     @Test
     @DisplayName("Get price test")
-    void getPriceTest() {
+    public void getPriceTest() {
         assertEquals(8.4, drink.getPrice());
     }
 }
